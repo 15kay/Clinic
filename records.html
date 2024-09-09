@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News and Updates - Buffalo City Campus Clinic</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+    <style>
+        
+
+        main {
+            display: flex;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            height: calc(100vh - 120px); /* Adjust height to fit within viewport */
+            margin: 0;
+        }
+
+        .content-container {
+            max-width: 800px; /* Adjust as needed */
+            width: 100%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 90px;
+        }
+
+        .article {
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            cursor: pointer;
+            color: #664b19;
+            text-decoration: underline;
+        }
+
+            .read-more:hover {
+                color: #664b19;
+            }
+
+        .full-content {
+            display: none;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+            <header id="header">
+                <div>
+                    <img src="wsu.jpeg" alt="Walter Sisulu University Logo" class="logo">
+                </div>
+                <nav>
+                    <ul><li><a href="home.html">Home</a></li></ul>
+                    <ul><li><a href="about.html">About Us</a></li></ul>
+                    <ul><li><a href="records.html">News and Updates</a></li></ul>
+                    <ul><li><a href="chat.html">FAQs</a></li></ul>
+                    <div class="Book_appointment">
+                        <a href="login.html" class="button">Book Appointment</a>
+                    </div>
+                 
+                </nav>
+            </header>
+
+    <main>
+        <div class="content-container">
+            <h1>News and Updates</h1>
+            <div class="article">
+                <h2>Free Flu Shots and Wellness Check-Ups </h2>
+                <p>Date: September 5, 2024</p>
+                <p>Campus Health Clinic Announces Free Flu Shots and Wellness Check-Ups  <span class="read-more" onclick="toggleContent('update1')">Read More</span></p>
+                <div id="update1" class="full-content">
+                    <p>We’re thrilled to share that starting Monday, September 11th, the Campus Health Clinic will be offering free flu shots to all students. Our goal is to help keep everyone healthy as flu season kicks in. You can stop by anytime from 9 AM to 5 PM, Monday through Friday, for a quick and easy walk-in appointment.
+
+But that’s not all—we’re also providing free wellness check-ups and sharing tips on how to stay healthy as the weather cools down. Make sure to bring your student ID, and feel free to ask us any questions about staying well this school year.
+
+For more info, check out our website or swing by the front desk. We’re here to help you stay healthy and happy!
+
+</p>
+                </div>
+            </div>
+
+            <div class="article">
+                <h2> Mental Health Support</h2>
+                <p>Date: August 30, 2024</p>
+                <p>New Mental Health Support at the Campus Health Clinic!<span class="read-more" onclick="toggleContent('update2')">Read More</span></p>
+                <div id="update2" class="full-content">
+                    <p>We’re thrilled to share that starting Monday, September 11th, the Campus Health Clinic is expanding our mental health services just for you. We know that college life can be overwhelming, and we want to make sure you have the support you need.
+
+We’re now offering one-on-one counseling sessions, group therapy, and stress-relief workshops to help you manage stress and stay balanced. You can easily book an appointment or join a workshop by visiting us at the clinic or checking out our website.
+
+Don’t forget to bring your student ID, and let us know if you have any questions or need additional support. We’re here to help you feel your best and make this school year a little easier. For more info, swing by the front desk or visit our website. We’re excited to support your mental well-being!
+
+
+
+
+</p>
+                </div>
+            </div>
+
+            <!-- Add more articles here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Buffalo City Campus Clinic. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

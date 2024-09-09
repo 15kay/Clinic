@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard - WSU Clinic</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="staff_dashboard.css">
+    <script defer src="patient-dashboard.js"></script>
+    <script defer src="staff_dashboard.js"></script>
+</head>
+<body>
+    <header id="header">
+        <div>
+            <img src="wsu.jpeg" alt="Walter Sisulu University Logo" class="logo">
+        </div>
+        <nav>
+            <ul><li><a href="doctors.html">Home</a></li></ul>
+            <ul><li><a href="availability.html">Set Availability</a></li></ul>
+            <ul><li><a href="#profile">Profile</a></li></ul>
+            <ul><li><a href="home.html">Logout</a></li></ul>
+           
+         
+        </nav>
+    </header>
+
+    <main>
+        <!-- Appointments Section -->
+        <section id="appointments">
+            <h2>All Appointments</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>Appointment Date</th>
+                        <th>Location</th>
+                        <th>Reason</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Sample Appointment Rows -->
+                    <!-- Repeat this row 50 times with real data -->
+                    <tr>
+                        <td>Kgaugelo Mmakola</td>
+                        <td>2024-09-15</td>
+                        <td>Potsdam</td>
+                        <td>Flu Symptoms</td>
+                        <td>
+                            <button class="button"  data-id="1">Respond</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tshegofatso Legoro</td>
+                        <td>2024-09-16</td>
+                        <td>Potsdam</td>
+                        <td>Allergy Check</td>
+                        <td>
+                            <button class="button" data-id="2">Respond</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tshegofatso Legoro</td>
+                        <td>2024-09-16</td>
+                        <td>Potsdam</td>
+                        <td>Allergy Check</td>
+                        <td>
+                            <button class="button" data-id="3">Respond</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tshegofatso Legoro</td>
+                        <td>2024-09-16</td>
+                        <td>Potsdam</td>
+                        <td>Allergy Check</td>
+                        <td>
+                            <button class="button"  data-id="4">Respond</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tshegofatso Legoro</td>
+                        <td>2024-09-16</td>
+                        <td>Potsdam</td>
+                        <td>Allergy Check</td>
+                        <td>
+                            <button class="button"  data-id="5">Respond</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tshegofatso Legoro</td>
+                        <td>2024-09-16</td>
+                        <td>Potsdam</td>
+                        <td>Allergy Check</td>
+                        <td>
+                            <button class="button"  data-id="6">Respond</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tshegofatso Legoro</td>
+                        <td>2024-09-16</td>
+                        <td>Potsdam</td>
+                        <td>Allergy Check</td>
+                        <td>
+                            <button class="button"  data-id="7">Respond</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tshegofatso Legoro</td>
+                        <td>2024-09-16</td>
+                        <td>Potsdam</td>
+                        <td>Allergy Check</td>
+                        <td>
+                            <button class="button" data-id="8">Respond</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tshegofatso Legoro</td>
+                        <td>2024-09-16</td>
+                        <td>Potsdam</td>
+                        <td>Allergy Check</td>
+                        <td>
+                            <button class="button" data-id="9">Respond</button>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                    <!-- Example of repeating rows -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="staff_dashboard.js">
+        
+    </script>
+</body>
+</html>

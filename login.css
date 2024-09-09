@@ -1,0 +1,72 @@
+
+
+/* Login Form Styles */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin-top: 180px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form input[type="radio"] {
+    margin-right: 10px;
+}
+
+.user-type-selection {
+    margin-bottom: 20px;
+}
+
+
+form .button {
+    padding: 10px 20px;
+    background-color: #664b19;
+    color: #fffcfc;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+form .button:hover {
+    background-color: #664b19;
+}
+
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+p a {
+    color: #282b2e;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+

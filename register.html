@@ -1,0 +1,180 @@
+﻿<?php
+include 'database/db.php';
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $fullName = $_POST['fullName'];
+    $idNumber = $_POST['idNumber'];
+    $studentNumber = $_POST['studentNumber'];
+    $phoneNumber = $_POST['phoneNumber'];
+    $address = $_POST['address'];
+    $email = $_POST['email'];
+    $dob = $_POST['dob'];
+    $password = $_POST['password'];
+    $confirmPassword = $_POST['confirmPassword'];
+
+    // Check if passwords match
+    if ($password !== $confirmPassword) {
+        die("Passwords do not match.");
+    }
+
+    // Hash the password
+    $passwordHash = password_hash($password, PASSWORD_BCRYPT);
+
+    // Prepare SQL statement to prevent SQL injection
+    $stmt = $conn->prepare("INSERT INTO Users (full_name, id_number, student_number, phone_number, address, email, dob, password_hash) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssssss", $fullName, $idNumber, $studentNumber, $phoneNumber, $address, $email, $dob, $passwordHash);
+
+    if ($stmt->execute()) {
+        echo "Registration successful!";
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+
+    $stmt->close();
+    $conn->close();
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Buffalo City Campus Clinic</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+ 
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 120px);
+            margin: 0;
+            margin-top: 210px;
+        }
+
+        .signup-container {
+            max-width: 800px;
+            width: 100%;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #0073e6;
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 2fr 2fr; /* Two-column layout */
+            gap: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        input, select {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #664b19;
+            color: white;
+            cursor: pointer;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            grid-column: span 2; /* Make button span both columns */
+        }
+
+        button:hover {
+            background-color: #664b19;
+        }
+
+
+        @media (max-width: 768px) {
+            form {
+                grid-template-columns: 1fr; /* Stack fields in one column on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div>
+            <img src="wsu.jpeg" alt="Walter Sisulu University Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="records.html">News and Updates</a></li>
+                <li><a href="chat.html">FAQs</a></li>
+            </ul>
+            <div class="Book_appointment">
+                <a href="login.html" class="button">Book Appointment</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="signup-container">
+           
+            <form id="signupForm" method="post">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+
+                <label for="idNumber">ID Number:</label>
+                <input type="text" id="idNumber" name="idNumber" required placeholder="Enter your ID number">
+
+                <label for="studentNumber">Student/Staff Number:</label>
+                <input type="text" id="studentNumber" name="studentNumber" required placeholder="Enter your student or Staff number">
+
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required placeholder="Enter your phone number">
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required placeholder="Enter your address">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm your password">
+                <label for="userType">User Type:</label>
+                <select id="userType" name="userType" required>
+                    <option value="student">Student</option>
+                    <option value="staff">Staff</option>
+                </select><br>
+                <button type="submit">Sign Up</button>
+                <p>Already have an Account? <a href="login.html"><span style="color: #aa781b;">Sign In</span></a></p> <!-- Link to Sign Up Page -->
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Buffalo City Campus Clinic. All rights reserved.</p>
+    </footer>
+</body>
+</html>

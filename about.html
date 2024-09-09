@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Buffalo City Campus Clinic</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        
+        /* Hero Section */
+        #hero {
+            background-image: url('clinic-bg.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            color: #664b19;
+            text-align: center;
+            word-wrap: break-word; /* Ensure long words break */
+        }
+
+        #hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        #hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .btn-primary {
+            background-color: #664b19;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #664b19;
+        }
+
+        /* About Section */
+        section#about {
+            padding: 40px;
+            background-color: #fff;
+            margin: -50px auto 0;
+            border-radius: 15px;
+            max-width: 1200px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            word-wrap: break-word; /* Ensure long words break */
+            text-align: justify; /* Distribute the text evenly */
+        }
+
+        section#about h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        section#about p {
+            text-align: justify; /* Justify text for even distribution */
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        /* Card Container */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: #f5f5f5;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            word-wrap: break-word; /* Ensure long words break */
+            text-align: justify; /* Justify text inside the card */
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h2 {
+            font-size: 24px;
+            color: #664b19;
+            margin-bottom: 20px;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card ul li {
+            font-size: 16px;
+            margin-bottom: 10px;
+            word-wrap: break-word; /* Ensure long words break */
+        }
+
+        /* Footer */
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 32px;
+            }
+
+            #hero p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header id="header">
+        <div>
+            <img src="wsu.jpeg" alt="Walter Sisulu University Logo" class="logo">
+        </div>
+        <nav>
+            <ul><li><a href="home.html">Home</a></li></ul>
+            <ul><li><a href="about.html">About Us</a></li></ul>
+            <ul><li><a href="records.html">News and Updates</a></li></ul>
+            <ul><li><a href="chat.html">FAQs</a></li></ul>
+            <div class="Book_appointment">
+                <a href="login.html" class="button">Book Appointment</a>
+            </div>
+            
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1 style="color: #664b19;">Welcome to Buffalo City Campus Clinic</h1>
+        <p>Your health and well-being, our priority</p>
+        <a href="#about" class="btn-primary">Learn More</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1>About Us</h1>
+        <p style="text-align: center;">We offer a range of healthcare services to ensure the well-being of our students and staff.</p>
+
+        <div class="card-container">
+            <!-- Services Card -->
+            <div class="card">
+                <h2>Services We Offer</h2>
+                <ul style="display: block;">
+                    <li>General Consultations</li>
+                    <li>Vaccinations</li>
+                    <li>Health Screenings</li>
+                    <li>Mental Health Counseling</li>
+                    <li>Sexual Health Services</li>
+                    <li>Nutritional Advice</li>
+                </ul>
+            </div>
+
+            <!-- Meet Our Team Card -->
+            <div class="card">
+                <h2>Meet Our Team</h2>
+                <p>Our healthcare team includes doctors, nurses, and counselors, ready to provide high-quality care for the campus community.</p>
+            </div>
+
+            <!-- Contact Us Card -->
+            <div class="card">
+                <h2>Contact Us</h2>
+                <p>Email: <a href="mailto:clinic@buffalocitycampus.wsu.ac.za">clinic@buffalocitycampus.wsu.ac.za</a></p>
+                <p>Phone: +27 63 654 1881</p>
+                <p>Location: Buffalo City Campus, Student Health Centre</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Buffalo City Campus Clinic. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+:root {
+    --primary-color: #664b19;
+    --secondary-color: #f39c12;
+    --background-color: #f5f7fa;
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    
+}
+
+header {
+    background-color: rgb(51, 51, 51);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+header.transparent {
+    background-color: rgba(74, 144, 226, 0.7);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+nav {
+    margin-right: 2rem;
+    display: inline-flex;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #b4b4b4;
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+.Book_appointment{
+    margin-left: 20px;
+    margin-top: 15px;
+    
+}
+.Book_appointment a{
+    text-decoration: none;
+}
+main {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: calc(100vh - 120px); /* Adjust height to fit within viewport */
+    margin: 0;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Adjust the width as needed */
+}
+
+h1, h2 {
+    color: #664b19;
+    text-align: center; /* Center-align text */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-type-selection {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+input, select, .button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.button:hover {
+    background-color: #ccc;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    margin-top: 210px;
+    padding: 10px 0;
+    text-align: center;
+    
+}
+
